@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Hello World</title>
+  <title>Hello World - One Piece Style</title>
   <style>
     body {
       margin: 0;
@@ -11,58 +11,60 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      background: linear-gradient(135deg, #667eea, #764ba2);
-      font-family: 'Poppins', sans-serif;
-    }
-
-    .card {
-      background: white;
-      padding: 40px 60px;
-      border-radius: 20px;
-      box-shadow: 0 8px 20px rgba(0,0,0,0.2);
-      text-align: center;
-      animation: fadeIn 2s ease;
+      background: linear-gradient(135deg, #1e3c72, #2a5298);
+      font-family: 'Treasure Map Deadhand', cursive, 'Poppins', sans-serif;
+      overflow: hidden;
     }
 
     h1 {
+      font-size: 4rem;
+      color: #FFD700;
+      text-shadow: 3px 3px 8px rgba(0,0,0,0.7);
+      animation: bounce 2s infinite ease-in-out;
+    }
+
+    /* Efek animasi teks */
+    @keyframes bounce {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-20px); }
+    }
+
+    /* Ombak bergerak */
+    .wave {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 200%;
+      height: 200px;
+      background: url('https://i.ibb.co/Q8G1sFV/wave.png') repeat-x;
+      background-size: 1000px 200px;
+      animation: wave 10s linear infinite;
+      opacity: 0.6;
+    }
+
+    @keyframes wave {
+      from { transform: translateX(0); }
+      to { transform: translateX(-50%); }
+    }
+
+    /* Kapal kecil */
+    .ship {
+      position: absolute;
+      bottom: 120px;
+      left: 50%;
       font-size: 3rem;
-      color: #333;
-      margin-bottom: 10px;
+      animation: float 4s ease-in-out infinite;
     }
 
-    p {
-      font-size: 1.2rem;
-      color: #666;
-    }
-
-    .btn {
-      margin-top: 20px;
-      padding: 12px 24px;
-      background: linear-gradient(135deg, #667eea, #764ba2);
-      border: none;
-      color: white;
-      font-size: 1rem;
-      border-radius: 30px;
-      cursor: pointer;
-      transition: 0.3s;
-    }
-
-    .btn:hover {
-      transform: scale(1.1);
-      box-shadow: 0 6px 15px rgba(0,0,0,0.3);
-    }
-
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(30px); }
-      to { opacity: 1; transform: translateY(0); }
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
     }
   </style>
 </head>
 <body>
-  <div class="card">
-    <h1>Hello, World! 🌍</h1>
-    <p>Selamat datang di halaman pertama HTML dengan tampilan menarik 🎉</p>
-    <button class="btn">Klik Saya</button>
-  </div>
+  <h1>☠️ Hello World ☠️</h1>
+  <div class="wave"></div>
+  <div class="ship">⛵</div>
 </body>
-</html>
+</html> 
